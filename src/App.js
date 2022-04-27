@@ -1,8 +1,19 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
+import React from "react";
+import Select from "./components/Select";
+import Card from "./components/Card";
+import Buttons from "./components/Buttons";
+import "./App.scss";
 
-function App() {
-  return <div className="app"></div>;
-}
+const App = () => {
+  return (
+    <div className="App">
+      <div>
+        <Select />
+        <Card />
+      </div>
+      <Buttons />
+    </div>
+  );
+};
 
 export default App;
