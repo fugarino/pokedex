@@ -63,6 +63,13 @@ body {
       margin-bottom: 0.6rem;
       border-radius: 50%;
       border: 2px solid rgb(221, 221, 221);
+      @include flexCenter();
+      overflow: hidden;
+
+      img {
+        width: 150px;
+        height: 150px;
+      }
     }
 
     h1 {
