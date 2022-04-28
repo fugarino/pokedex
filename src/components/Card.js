@@ -1,11 +1,14 @@
 import React from "react";
 
-const Card = () => {
+const Card = ({ url }) => {
   return (
     <div className="Card">
       <div className="Card-img"></div>
-      <h1>Bulbasaur</h1>
-      <p>A strange seed was planted on its back at birth. The plant sprouts and grows with this POKEMON.</p>
+      <h1>{url}</h1>
+      <div className="stats">
+        <div className="stat">Height: {}</div>
+        <div className="stat">Weight: {}</div>
+      </div>
     </div>
   );
 };

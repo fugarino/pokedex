@@ -4,8 +4,8 @@ import Button from "./Button";
 const Buttons = () => {
   return (
     <div className="Buttons">
-      <Button />
-      <Button />
+      <Button text="Previous" />
+      <Button text="Next" />
     </div>
   );
 };

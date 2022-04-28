@@ -1,9 +1,13 @@
 import React from "react";
 
-const Select = () => {
+const Select = ({ listOfPokemon, onChange, value }) => {
   return (
-    <select className="Select">
-      <option>Bulbasaur</option>
+    <select className="Select" value={value} onChange={onChange}>
+      {listOfPokemon.map((pokemon) => (
+        <option key={pokemon.url} value={pokemon.url}>
+          {pokemon.name}
+        </option>
+      ))}
     </select>
   );
 };

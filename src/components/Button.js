@@ -1,7 +1,7 @@
 import React from "react";
 
-const Button = () => {
-  return <button className="button">Previous</button>;
+const Button = ({ text }) => {
+  return <button className="button">{text}</button>;
 };
 
 export default Button;
