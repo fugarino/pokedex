@@ -31,6 +31,8 @@ const App = () => {
     setValue(e.target.value);
   };
 
+  console.log("hi");
+
   return (
     <div className="App">
       <div>
