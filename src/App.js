@@ -7,6 +7,7 @@ import "./App.scss";
 const App = () => {
   const [listOfPokemon, setListOfPokemon] = useState([]);
   const [value, setValue] = useState("https://pokeapi.co/api/v2/pokemon/1/");
+  const [name, setName] = useState({});
   const URL = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0";
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const App = () => {
     const getIndividualPokemon = async () => {
       fetch(value)
         .then((res) => res.json())
-        .then((res) => console.log(res));
+        .then((res) => setName(res));
     };
     getIndividualPokemon();
   }, [value]);
@@ -35,7 +36,7 @@ const App = () => {
     <div className="App">
       <div>
         <Select listOfPokemon={listOfPokemon} onChange={onSelectChange} value={value} />
-        <Card url={value} />
+        <Card name={name} />
       </div>
       <Buttons />
     </div>
