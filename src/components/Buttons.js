@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "./Button";
 
-const Buttons = () => {
+const Buttons = ({ onClick }) => {
   return (
     <div className="Buttons">
-      <Button text="Previous" />
-      <Button text="Next" />
+      <Button text="Previous" onClick={onClick} buttonType={2} />
+      <Button text="Next" onClick={onClick} buttonType={1} />
     </div>
   );
 };
